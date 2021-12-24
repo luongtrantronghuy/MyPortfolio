@@ -100,7 +100,6 @@ img{
 }
 
 /* Reusable CSS */
-
 .section{
     padding: 2rem 0 4rem;
 }
@@ -121,7 +120,6 @@ img{
 }
 
 /* Layout */
-
 .container{
     max-width: 768px;
     margin-left: var(--mb-1-5);
@@ -131,4 +129,91 @@ img{
 .grid{
     display: grid;
     gap: 1.5rem;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+/* nav */
+.nav{
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between; /* https://www.w3schools.com/cssref/css3_pr_justify-content.asp */
+    align-items: center;
+}
+
+.nav__logo,
+.nav__toggle{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo:hover{
+    color: var(--first-color);
+}
+
+.nav__toggle{
+    font-size: 1.1rem;
+    cursor: pointer; /* https://www.w3schools.com/cssref/pr_class_cursor.asp */
+}
+
+.nav__toggle:hover{
+    color: var(--first-color);
+}
+
+/* nav-menu react to screen size */
+@media screen and (max-width: 767px) {
+    .nav__menu{
+        position: fixed;
+        bottom: -100%; /* hide menu */
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem; /* top right bottom (left) */
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+
+.nav__list{
+    grid-template-columns: repeat(3, 1fr); /* https://www.w3schools.com/cssref/pr_grid-template-columns.asp */
+    gap: 2rem;
+}
+
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__link:hover{
+    color: var(--first-color);
+}
+
+.nav__icon{
+    font-size: 1.2rem;
+}
+
+.nav__close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+}
+
+.nav__close:hover{
+    color: var(--first-color-alt);
 }
