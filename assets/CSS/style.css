@@ -249,8 +249,9 @@ img{
 }
 
 .home__blob{
-    width: 200px;
+    width: 235px;
     fill: var(--first-color);
+    /* align-items: center; */
 }
 
 .home__blob-img{
@@ -348,17 +349,17 @@ img{
     margin-bottom: var(--mb-2-5);
 }
 
-.about__info-name{
-    font-size: var(--smaller-font-size);
-}
-
 .about__info-title{
     font-size: var(--h2-font-size);
     font-weight: var(--font-semi-bold);
     color: var(--title-color);
 }
 
-.about__infor-title,
+.about__info-name{
+    font-size: var(--smaller-font-size);
+}
+
+.about__info-title,
 .about__info-name{
     display: block;
     text-align: center;
@@ -483,15 +484,89 @@ img{
 .skills__close .skills__list{
     height: 0;
     overflow: hidden;
+    /* transition: .3s; */
 }
 
 .skills__open .skills__list{
     height: max-content;
     margin-bottom: var(--mb-2-5);
+    /* transition: .3s; */
 }
 
 .skills__open .skills__arrow{
     transform: rotate(-180deg);
 }
 
+/* Qualification */
+.qualification__tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2);
+}
+
+.qualification__button{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.qualification__button:hover{
+    color: var(--first-color);
+}
+
+.qualification__icon{
+    font-size: 1.3rem;
+    margin-right: var(--mb-0-25);
+}
+
+.qualification__data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.qualification__title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.qualification__subtitle{
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.qualification__calendar{
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+.qualification__rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+.qualification__line{
+    display: block;
+    width: 1px;
+    width: 1px;
+    height: 100%;
+    background-color: var(--first-color);
+    transform: translate(6px, -7px);
+}
+
+.qualification [data-content]{
+    display: none;
+}
+
+.qualification__active[data-content]{
+    display: block;
+}
+
+.qualification__button.qualification__active{
+    color: var(--first-color);
+}
 
