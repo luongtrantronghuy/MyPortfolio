@@ -483,7 +483,7 @@ img{
     width: 85%;
 }
 
-.skills__php{
+.skills__api{
     width: 80%;
 }
 
@@ -491,24 +491,20 @@ img{
     width: 70%;
 }
 
-.skills__firebase{
+.skills__docker{
     width: 90%;
 }
 
-.skills__python{
+.skills__express{
     width: 55%;
 }
 
-.skills__figma{
+.skills__postgre{
+    width: 55%;
+}
+
+.skills__c{
     width: 90%;
-}
-
-.skills__sketch{
-    width: 85%;
-}
-
-.skills__photoshop{
-    width: 85%;
 }
 
 .skills__close .skills__list{
